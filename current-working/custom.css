@@ -1,0 +1,72 @@
+:root {
+    --mega-orange: #ff5a00;
+    --mega-orange-light: #ff7a2f;
+    --mega-orange-soft: #ff9b66;
+
+    --mega-bg-1: #fff8f3;
+    --mega-bg-2: #ffe7d6;
+    --mega-bg-3: #ffffff;
+
+    --mega-text: #343434;
+}
+
+/* MODO CLARO BASE */
+html,
+body {
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(255, 90, 0, 0.16),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(255, 155, 102, 0.12),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            var(--mega-bg-1) 0%,
+            var(--mega-bg-2) 55%,
+            var(--mega-bg-3) 100%
+        ) !important;
+
+    color: var(--mega-text) !important;
+    min-height: 100%;
+}
+
+/* HEADER */
+body::before {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 1180px;
+    height: 100px;
+    margin: 10px auto 0;
+
+    background-image: url("/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 78px;
+
+    position: relative;
+    z-index: 20;
+}
+
+/* TEXTOS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+label {
+    color: var(--mega-text);
+}
+
+/* LINKS */
+a {
+    color: var(--mega-orange) !important;
+}
