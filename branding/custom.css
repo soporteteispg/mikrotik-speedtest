@@ -44,7 +44,7 @@ body::before {
     height: 100px;
     margin: 10px auto 0;
 
-    background-image: url("/logo.png");
+    background-image: url("/logo-horizontal.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 78px;
