@@ -5,6 +5,7 @@ USER root
 COPY branding/logo.png /usr/share/nginx/html/logo.png
 COPY branding/custom.css /usr/share/nginx/html/custom.css
 COPY branding/custom.js /usr/share/nginx/html/custom.js
+COPY branding/app.svg /usr/share/nginx/html/assets/images/app.svg
 
 RUN sed -i 's#</head>#<link rel="stylesheet" href="/custom.css">\n</head>#' /usr/share/nginx/html/index.html
 
