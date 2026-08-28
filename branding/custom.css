@@ -1,11 +1,112 @@
+:root {
+    --mega-orange: #ff5a00;
+    --mega-orange-light: #ff7a2f;
+    --mega-orange-soft: #ffd7c2;
+    --mega-dark: #393939;
+    --mega-bg: #fff4ec;
+    --mega-white: #ffffff;
+}
+
+/* Fondo general */
+html,
+body {
+    background:
+        radial-gradient(circle at 20% 10%, rgba(255, 132, 76, .25), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(255, 90, 0, .15), transparent 40%),
+        linear-gradient(135deg, #fff8f3 0%, #ffe4d2 55%, #fff 100%) !important;
+    color: var(--mega-dark) !important;
+    min-height: 100%;
+}
+
+/* Logo */
 body::before {
     content: "";
     display: block;
-    width: 220px;
-    height: 80px;
-    margin: 20px auto 10px auto;
+    width: 280px;
+    height: 110px;
+    margin: 24px auto 10px;
     background-image: url("/logo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    z-index: 9999;
+    position: relative;
+}
+
+/* Contenedores principales */
+main,
+.container,
+.wrapper,
+.card {
+    background: transparent !important;
+}
+
+/* Tarjetas */
+[class*="card"],
+[class*="panel"],
+[class*="result"] {
+    border-radius: 20px !important;
+}
+
+/* Gauge y paneles */
+svg,
+canvas {
+    filter: drop-shadow(0 8px 20px rgba(255, 90, 0, .12));
+}
+
+/* Textos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+label {
+    color: var(--mega-dark);
+}
+
+/* Valores principales */
+[class*="download"],
+[class*="upload"],
+[class*="ping"],
+[class*="jitter"] {
+    color: var(--mega-dark);
+}
+
+/* Botones */
+button,
+.btn {
+    background: linear-gradient(
+        90deg,
+        var(--mega-orange),
+        var(--mega-orange-light)
+    ) !important;
+
+    color: white !important;
+    border: none !important;
+    border-radius: 999px !important;
+    box-shadow: 0 8px 18px rgba(255, 90, 0, .25) !important;
+}
+
+/* Líneas / barras */
+progress,
+[class*="progress"] {
+    accent-color: var(--mega-orange);
+}
+
+/* Links */
+a {
+    color: var(--mega-orange) !important;
+}
+
+/* Footer branding */
+body::after {
+    content: "Mega Network • Test de velocidad interno";
+    display: block;
+    text-align: center;
+    margin: 24px 0 18px;
+    color: #666;
+    font-size: 14px;
 }
