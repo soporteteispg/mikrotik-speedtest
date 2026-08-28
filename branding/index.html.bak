@@ -1,17 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Mega Network - Test de Velocidad</title>
   <meta name="description"
-    content="Test your network speed now. HTML5 Network Performance Estimation Tool. Self-Hosted SpeedTest by OpenSpeedTestâ„¢"/>
+    content="Test your network speed now. HTML5 Network Performance Estimation Tool. Self-Hosted SpeedTest by OpenSpeedTest™"/>
   <link href="assets/css/app.css" rel="stylesheet" type="text/css" />
   <script> function getCookieValue(b,a){return(a=document.cookie.match("(^|;)\\s*"+b+"\\s*=\\s*([^;]+)"))?a.pop():""}if("light"===getCookieValue("mode")){var darkStyle=document.getElementById("darkmode");darkStyle&&darkStyle.parentNode.removeChild(darkStyle)}; </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta property="og:image" content="assets/images/img.png" />
-  <link rel='canonical' href='https://openspeedtest.com'/>  <link rel="icon" type="image/png" href="/favicon.png?v=3">
-  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=3">
+  <link rel='canonical' href='https://openspeedtest.com'/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/icons/site.webmanifest">
+  <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="/custom.css">
 </head>
@@ -34,7 +41,7 @@
 
      Like this Project? Please Donate NOW & Keep us Alive -> https://go.openspeedtest.com/Donate
 
-     Speed Test by OpenSpeedTestâ„¢ï¸ is Free and Open-Source Software (FOSS) with MIT License.
+     Speed Test by OpenSpeedTest™️ is Free and Open-Source Software (FOSS) with MIT License.
      Read full license terms @ http://go.openspeedtest.com/License
 
      If you have any Questions, ideas or Comments Please Send it via -> https://go.openspeedtest.com/SendMessage
@@ -133,7 +140,7 @@ function ostOnload() {
   </script>
 
 <!--
-Speed Test by OpenSpeedTestâ„¢ï¸ is Free and Open-Source Software with MIT License.
+Speed Test by OpenSpeedTest™️ is Free and Open-Source Software with MIT License.
 
 You can play with the CSS, HTML & SVG files to change the colors or add your support desk info to this page.
 Also, you can add your company logo anywhere on this page. It's FOSS. You can do whatever you see fit.
@@ -150,8 +157,8 @@ please get in touch with support@openspeedtest.com.
   <object style="visibility:hidden" id="OpenSpeedTest-UI" data="assets/images/app.svg" type="image/svg+xml"></object>
  
   <div class="Credits">
-    <a href="https://openspeedtest.com?ref=Self-Hosted&Run">SpeedTest by OpenSpeedTestâ„¢</a> is a Free and <a href="https://github.com/openspeedtest/Speed-Test">Open-Source HTML5 Network Speed Test</a> Software.
-    <p style="font-size: 12px;">Â© Copyright 2013-2023 OpenSpeedTestâ„¢ All Rights Reserved.</p>
+    <a href="https://openspeedtest.com?ref=Self-Hosted&Run">SpeedTest by OpenSpeedTest™</a> is a Free and <a href="https://github.com/openspeedtest/Speed-Test">Open-Source HTML5 Network Speed Test</a> Software.
+    <p style="font-size: 12px;">© Copyright 2013-2023 OpenSpeedTest™ All Rights Reserved.</p>
 </div>
   
   <script src="assets/js/app-2.5.4.min.js"></script>
@@ -160,4 +167,3 @@ please get in touch with support@openspeedtest.com.
 <script src="/custom.js"></script>
 </body>
 </html>
-
