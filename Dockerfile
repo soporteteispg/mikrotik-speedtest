@@ -10,5 +10,6 @@ COPY branding/index.html /usr/share/nginx/html/index.html
 
 COPY branding/logo-horizontal.png /usr/share/nginx/html/logo-horizontal.png
 COPY branding/logo-vertical.png /usr/share/nginx/html/assets/images/logo-vertical.png
+COPY branding/favicon.png /usr/share/nginx/html/favicon.png
 
 USER 101
