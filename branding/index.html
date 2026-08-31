@@ -167,7 +167,28 @@ please get in touch with support@openspeedtest.com.
   <script src="assets/js/darkmode.js"></script>
 
 <script src="/custom.js"></script>
+<script>
+document.getElementById("OpenSpeedTest-UI").addEventListener("load", function () {
+    const svgDoc = this.contentDocument;
+    if (!svgDoc) return;
+
+    const observer = new MutationObserver(function () {
+        svgDoc.querySelectorAll("text").forEach(function (el) {
+            if (el.textContent && el.textContent.toLowerCase().includes("openspeedtest")) {
+                el.textContent = "Mega Network";
+            }
+        });
+    });
+
+    observer.observe(svgDoc.documentElement, {
+        subtree: true,
+        childList: true,
+        characterData: true
+    });
+});
+</script>
 </body>
 </html>
+
 
 
