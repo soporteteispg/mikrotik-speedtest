@@ -169,52 +169,10 @@ please get in touch with support@openspeedtest.com.
 <script src="/custom.js"></script>
 
 
-<script>
-document.getElementById("OpenSpeedTest-UI").addEventListener("load", function () {
-    const svgDoc = this.contentDocument;
-    if (!svgDoc) return;
 
-    const speedText = svgDoc.getElementById("oDoLiveSpeed");
-    const statusText = svgDoc.getElementById("oDoLiveStatus");
-
-    if (!speedText) return;
-
-    const ns = "http://www.w3.org/2000/svg";
-
-    const finalLogo = svgDoc.createElementNS(ns, "image");
-    finalLogo.setAttribute("href", "/assets/images/logo-vertical.png");
-    finalLogo.setAttribute("x", "88");
-    finalLogo.setAttribute("y", "103");
-    finalLogo.setAttribute("width", "120");
-    finalLogo.setAttribute("height", "58");
-    finalLogo.setAttribute("preserveAspectRatio", "xMidYMid meet");
-    finalLogo.setAttribute("visibility", "hidden");
-    finalLogo.setAttribute("id", "MegaFinalLogo");
-
-    speedText.parentNode.appendChild(finalLogo);
-
-    const observer = new MutationObserver(function () {
-        const value = (speedText.textContent || "").trim().toLowerCase();
-
-        if (value.includes("openspeedtest") || value.includes("mega network")) {
-            speedText.setAttribute("visibility", "hidden");
-            finalLogo.setAttribute("visibility", "visible");
-
-            if (statusText) {
-                statusText.textContent = "All done";
-            }
-        }
-    });
-
-    observer.observe(speedText, {
-        childList: true,
-        characterData: true,
-        subtree: true
-    });
-});
-</script>
 </body>
 </html>
+
 
 
 
