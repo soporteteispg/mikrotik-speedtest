@@ -167,28 +167,36 @@ please get in touch with support@openspeedtest.com.
   <script src="assets/js/darkmode.js"></script>
 
 <script src="/custom.js"></script>
+
 <script>
 document.getElementById("OpenSpeedTest-UI").addEventListener("load", function () {
     const svgDoc = this.contentDocument;
     if (!svgDoc) return;
 
+    const speedText = svgDoc.getElementById("oDoLiveSpeed");
+
     const observer = new MutationObserver(function () {
-        svgDoc.querySelectorAll("text").forEach(function (el) {
-            if (el.textContent && el.textContent.toLowerCase().includes("openspeedtest")) {
-                el.textContent = "Mega Network";
-            }
-        });
+        if (!speedText) return;
+
+        const value = (speedText.textContent || "").trim().toLowerCase();
+
+        if (value.includes("openspeedtest")) {
+            speedText.textContent = "Mega Network";
+        }
     });
 
-    observer.observe(svgDoc.documentElement, {
-        subtree: true,
-        childList: true,
-        characterData: true
-    });
+    if (speedText) {
+        observer.observe(speedText, {
+            childList: true,
+            characterData: true,
+            subtree: true
+        });
+    }
 });
 </script>
 </body>
 </html>
+
 
 
 
