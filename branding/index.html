@@ -170,8 +170,44 @@ please get in touch with support@openspeedtest.com.
 
 
 
+
+<script>
+document.getElementById("OpenSpeedTest-UI").addEventListener("load", function () {
+    const svgDoc = this.contentDocument;
+    if (!svgDoc) return;
+
+    const speedText = svgDoc.getElementById("oDoLiveSpeed");
+    const statusText = svgDoc.getElementById("oDoLiveStatus");
+
+    if (!speedText) return;
+
+    function updateFinalText() {
+        const value = (speedText.textContent || "").trim().toLowerCase();
+
+        if (value.includes("openspeedtest")) {
+            speedText.textContent = "Test Finalizado";
+
+            if (statusText) {
+                statusText.textContent = "Click para más detalles";
+            }
+        }
+    }
+
+    const observer = new MutationObserver(updateFinalText);
+
+    observer.observe(speedText, {
+        childList: true,
+        characterData: true,
+        subtree: true
+    });
+
+    updateFinalText();
+});
+</script>
 </body>
 </html>
+
+
 
 
 
