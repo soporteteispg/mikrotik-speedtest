@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - lab-ui-ajustes
   workflow_dispatch:
 
 permissions:
@@ -31,10 +32,20 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set image tag
+        id: vars
+        shell: bash
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "tag=latest" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=lab" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
           platforms: linux/arm64
           push: true
-          tags: ghcr.io/soporteteispg/mikrotik-speedtest:latest
+          tags: ghcr.io/soporteteispg/mikrotik-speedtest:${{ steps.vars.outputs.tag }}
